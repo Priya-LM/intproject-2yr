@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="public/js/script.js"></script>
+    <link rel="stylesheet"  type="text/css" href="public/css/style.css">
+    <title>Student Registration Page</title>
+</head>
+<body>
+    <div class="box">
+    <h2>Student Registration Form</h2>
+
+    <form onSubmit="return verifyPassword()" action="/sign_up" method="post">
+        <div>
+            <label>Name</label><br>
+            <input type="text"
+                   name="name"
+                   id="name"
+                   placeholder="Full Name">
+        </div>
+        <br>
+
+        <div>
+            <label for="gender">Gender</label><br>            
+            <input type="checkbox" name="gender" value="male" class="gender" >
+            <label>Male</label>           
+            <input type="checkbox" name="gender" value="female" class="gender"> 
+            <label>Female</label>            
+            <input type="checkbox" name="gender" value="other" class="gender">
+            <label>Other</label>
+        </div>
+        <br>
+
+
+        <div>
+            <label>USN</label><br>
+            <input type="text"
+                   name="usn"
+                   id="usn"
+                   placeholder="USN">
+        </div>
+        <br>
+
+        <div class="bday">
+            <label >Birthday</label><br>
+            <input type="text"
+                   name="bday"
+                  
+                   placeholder="DD/MM/YYYY">
+        </div>
+        <br>
+
+        <div>
+            <label>Year of Admission</label><br>
+            <input type="text"
+                   name="adm"
+                   id="adm"
+                   placeholder="ex: 2021-2022">
+        </div>
+        <br>
+
+        <div>
+            <label>Program</label><br>
+            <select id="program" name="program" onchange="changeCourses()">
+                <option value="" disabled selected>Choose</option>
+                <option value="ug">UG</option>
+                <option value="pg">PG</option>
+             </select>
+        </div>           
+        <br>
+
+        <div>
+            <label for="course">Course:</label>
+            <select id="course">
+                <option value="" >Select course</option>
+            </select>
+        </div>
+        <br>
+                       
+        <div>
+            <label>Email Address</label><br>
+             <input type="email" 
+                    name="email"
+                    id="mail"
+                    placeholder="Email Address">
+        </div>
+        <br>
+
+        <div>
+            <label>Permanent Address</label><br>
+            <input type="text" value="" name="address" placeholder="Street Address"><br>
+            <input type="text" value="" name="address" placeholder="Street Address Line 2"><br>
+            <input type="text" value="" name="address" placeholder="City"><br>
+            <input type="text" value="" name="address" placeholder="State"><br>
+            <input type="text" value="" name="address" placeholder="Country"><br>
+            <input type="text" value="" name="address" placeholder="PIN"><br>
+        </div>
+        <br>
+
+        <div>
+            <input type="password" 
+                   name="password" 
+                   placeholder="Password" 
+                   id="myp">
+            <div id="length" class="invalid">Note: should contain atleast 8 characters  </div>    
+        </div>
+        <br>
+
+
+        <div>
+            <input type="password" 
+                   name="confirmPassword" 
+                   minlength="8" 
+                   id="mypass"
+                   placeholder="Confirm Password">         
+        </div>
+        <br>
+
+        <div class="check">
+            <input type="checkbox" onclick="toggleVisibility(); vistog();"/>Show Password</br>  
+        </div>
+        <br>
+
+        <div class="block"> Already a member? <a href="signin.html"> Sign in </a></div>
+
+        <input type="submit" class="btn" ></input>
+    
+    </form>
+    </div>
+</body>
+</html>
